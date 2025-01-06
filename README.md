@@ -2,6 +2,8 @@
 
 This is an edited version of the original **Kane-qb-hud-Nopixel-4.0-inspired** script, inspired by the NoPixel 4.0 HUD for the **QBCore Framework**. The script provides a dynamic, feature-rich Heads-Up Display (HUD) with various elements such as health, armor, hunger, thirst, and more.
 
+![Screenshot 2025-01-06 165111](https://github.com/user-attachments/assets/93cdcd3d-4ac2-4664-8dbd-a14944ba6ef3)
+
 ## Features
 
 - **Customizable HUD**: Edit the layout, colors, and elements to fit your server's needs.
@@ -38,6 +40,22 @@ This version includes the following modifications:
 - Updated **UI layouts and animations** to improve the user experience.
 - Additional **customizable options** to further personalize the HUD for your server.
 
+## Adding New Safe Zones
+
+To add new safe zones, you can define them in the `client.lua` file. You can create custom polygonal areas for each safe zone by specifying the coordinates.
+
+Example of adding a new safe zone (HotelZone):
+
+```lua
+local HotelZone = PolyZone:Create({
+    vector2(-371.8846130371, -855.71673583984),
+    vector2(-371.57205200196, -967.6898803711),
+    -- Add more coordinates for the Safe Zone shape
+}, {
+    name = "HotelZone",
+    debugPoly = false
+})
+```
 ## Credits
 
 - Original script by **rohKane**: [GitHub](https://github.com/rohKane)
